@@ -5,12 +5,12 @@
 module.exports = function getLoveTrianglesCount(preferences = []) {
   var prefLength = preferences.length;
   var count = 0;
-  var a = preferences;
+  var arr = preferences.slice();
   for (var i = 0; i < prefLength; i++)  {
-      if(a[a[a[i] - 1] - 1] - 1 === i) {
-         if(a[a[i] - 1] - 1 === a[i] - 1)  {
+      if(arr[arr[arr[i] - 1] - 1] - 1 === i) {
+         if(arr[arr[i] - 1] - 1 === arr[i] - 1)  {
              continue;
-         }  else if(a[i] - 1 === i)  {
+         }  else if(arr[i] - 1 === i)  {
              continue;
          } else {
              count++;
